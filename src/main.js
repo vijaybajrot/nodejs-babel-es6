@@ -1,6 +1,6 @@
 require("regenerator-runtime/runtime");
 require("dotenv").config();
 
-import { start } from "@root/app";
+const { start } = require("@root/app");
 
 start();
