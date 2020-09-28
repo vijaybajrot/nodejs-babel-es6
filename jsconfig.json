@@ -4,5 +4,9 @@
     "paths": {
       "@root/*": ["./src/*"]
     }
-  }
+  },
+  "typeAcquisition": {
+    "include": ["jest"]
+  },
+  "exclude": ["./node_module", "./dist"]
 }
