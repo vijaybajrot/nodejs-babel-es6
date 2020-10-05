@@ -1,11 +1,10 @@
-import path from "path";
 import express from "express";
 
-import { registerRoutes } from "@root/routes";
-import { createContext } from "@root/context";
 import connection from "@root/connection";
 import config from "@root/config";
 import renderApp from "@root/render";
+import { registerRoutes } from "@root/routes";
+import { createContext } from "@root/context";
 
 export async function start() {
   const app = express();
