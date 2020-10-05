@@ -2,6 +2,7 @@ import express from "express";
 
 import { registerRoutes } from "@root/routes";
 import connection from "@root/connection";
+import config from "@root/config";
 
 export async function start() {
   const app = express();
