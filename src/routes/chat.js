@@ -1,11 +1,21 @@
-import { Router } from "express";
-
 import * as controller from "@root/controllers/chat";
 
-const router = Router();
+import router from "@root/router";
 
-router.get("/", controller.chat);
+const testMiddleware = async (req, res, next) => {
+  console.log("middleware called");
+  next();
+};
 
-export default (app) => {
-  app.use("/chat", router);
+const routes = [
+  {
+    method: "GET",
+    path: "/",
+    handler: controller.chat,
+    middlewares: [testMiddleware],
+  },
+];
+
+export default (ctx) => {
+  return router(ctx, { prefix: "/chat", routes });
 };

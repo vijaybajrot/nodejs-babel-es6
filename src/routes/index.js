@@ -2,6 +2,6 @@ import chat from "./chat";
 
 const routes = [chat];
 
-export function registerRoutes(app) {
-  routes.forEach((route) => route.apply(null, [app]));
+export function registerRoutes(ctx) {
+  routes.forEach((route) => route.apply(null, [ctx]));
 }

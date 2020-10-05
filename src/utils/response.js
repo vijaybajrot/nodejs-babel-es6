@@ -1,7 +1,6 @@
-export function sendOk(response, { data, message = "Ok" }) {
-  return response.json({ status: true, message, data });
-}
+import context from "@root/context";
 
-export function sum(x = 0, y = 0) {
-  return x + y;
+export function sendOk({ data, message = "Ok" }) {
+  const { res } = context;
+  return res.json({ status: true, message, data });
 }
