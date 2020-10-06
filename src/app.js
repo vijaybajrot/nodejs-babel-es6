@@ -1,8 +1,8 @@
 import express from "express";
 
-import connection from "@root/connection";
 import config from "@root/config";
 import renderApp from "@root/render";
+import connection from "@root/connection";
 import { registerRoutes } from "@root/routes";
 import { createContext } from "@root/context";
 
